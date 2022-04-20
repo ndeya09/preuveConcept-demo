@@ -1,8 +1,3 @@
-<!-- User Id Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('user_id', 'User Id:') !!}
-    {!! Form::number('user_id', null, ['class' => 'form-control']) !!}
-</div>
 
 <!-- Annee Field -->
 <div class="form-group col-sm-6">
@@ -12,19 +7,19 @@
 
 <!-- Numerocellulaire Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('numeroCellulaire', 'Numerocellulaire:') !!}
+    {!! Form::label('numeroCellulaire', 'Numéro Cellulaire:') !!}
     {!! Form::text('numeroCellulaire', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
 </div>
 
 <!-- Numeroappart Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('numeroAppart', 'Numeroappart:') !!}
+    {!! Form::label('numeroAppart', 'Numero Appartement:') !!}
     {!! Form::number('numeroAppart', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Codepostal Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('codePostal', 'Codepostal:') !!}
+    {!! Form::label('codePostal', 'Code Postal:') !!}
     {!! Form::text('codePostal', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
 </div>
 
@@ -42,7 +37,7 @@
 
 <!-- Datearrivcan Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('dateArrivCan', 'Datearrivcan:') !!}
+    {!! Form::label('dateArrivCan', 'Date Arrivé au Canada:') !!}
     {!! Form::text('dateArrivCan', null, ['class' => 'form-control','id'=>'dateArrivCan']) !!}
 </div>
 
@@ -58,18 +53,32 @@
 
 <!-- Declarationannprecedente Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('declarationAnnPrecedente', 'Declarationannprecedente:') !!}
-    {!! Form::text('declarationAnnPrecedente', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
+    {!! Form::label('declarationAnnPrecedente', 'Declaration année precedente:') !!}<br>
+    <form name="declarationAnnPrecedente" class="form-control">
+    <input type="checkbox" name="oui" id="oui" value="oui">
+    <label for="oui">Oui</label><br>
+    <input type="checkbox" name="non" id="non" value="non">
+    <label for="non">Non applicable - Nouvel(le) immigrant(e)</label><br>
+</form>
 </div>
 
 <!-- Occupation Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('occupation', 'Occupation:') !!}
-    {!! Form::text('occupation', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
+    <select name="occupation" class="form-control">
+        <option value="etudiant">Etudiant</option>
+        <option value="salarié">Salarié</option>
+        <option value="travailleurAutonome">travailleur Autonome</option>
+        <option value="autre">Autre</option>
+    </select>
 </div>
 
 <!-- Situationmatrimoniale Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('situationMatrimoniale', 'Situationmatrimoniale:') !!}
-    {!! Form::text('situationMatrimoniale', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
+    {!! Form::label('situationMatrimoniale', 'Situation matrimoniale:') !!}
+    <select name="situationMatrimoniale" class="form-control">
+        <option value="marie">Marié</option>
+        <option value="celibataire">Celibataire</option>
+        <option value="autre">Autre</option>
+    </select>
 </div>

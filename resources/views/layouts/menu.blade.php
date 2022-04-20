@@ -12,5 +12,3 @@
         <p>Paiements</p>
     </a>
 </li>
-
-

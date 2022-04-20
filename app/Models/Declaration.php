@@ -80,7 +80,6 @@ class Declaration extends Model
      * @var array
      */
     public static $rules = [
-        'user_id' => 'required',
         'annee' => 'required|integer',
         'numeroCellulaire' => 'required|string|max:255',
         'numeroAppart' => 'required|integer',

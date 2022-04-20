@@ -8,7 +8,9 @@ use App\Repositories\PaiementRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;
+use Auth;
 use Response;
+use App\Models\Paiement;
 
 class PaiementController extends AppBaseController
 {
@@ -29,7 +31,8 @@ class PaiementController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $paiements = $this->paiementRepository->all();
+        //$paiements = $this->paiementRepository->all();
+        $paiements = Paiement::where('declaration_id',Auth::id())->get();
 
         return view('paiements.index')
             ->with('paiements', $paiements);
@@ -55,8 +58,9 @@ class PaiementController extends AppBaseController
     public function store(CreatePaiementRequest $request)
     {
         $input = $request->all();
-
+        $input['declaration_id'] = Auth::id();
         $paiement = $this->paiementRepository->create($input);
+
 
         Flash::success('Paiement saved successfully.');
 

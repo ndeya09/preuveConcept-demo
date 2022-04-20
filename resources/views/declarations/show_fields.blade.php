@@ -1,8 +1,5 @@
 <!-- User Id Field -->
-<div class="col-sm-12">
-    {!! Form::label('user_id', 'User Id:') !!}
-    <p>{{ $declaration->user_id }}</p>
-</div>
+
 
 <!-- Annee Field -->
 <div class="col-sm-12">
@@ -12,19 +9,19 @@
 
 <!-- Numerocellulaire Field -->
 <div class="col-sm-12">
-    {!! Form::label('numeroCellulaire', 'Numerocellulaire:') !!}
+    {!! Form::label('numeroCellulaire', 'Numero Cellulaire:') !!}
     <p>{{ $declaration->numeroCellulaire }}</p>
 </div>
 
 <!-- Numeroappart Field -->
 <div class="col-sm-12">
-    {!! Form::label('numeroAppart', 'Numeroappart:') !!}
+    {!! Form::label('numeroAppart', 'Numero Appartement:') !!}
     <p>{{ $declaration->numeroAppart }}</p>
 </div>
 
 <!-- Codepostal Field -->
 <div class="col-sm-12">
-    {!! Form::label('codePostal', 'Codepostal:') !!}
+    {!! Form::label('codePostal', 'Code Postal:') !!}
     <p>{{ $declaration->codePostal }}</p>
 </div>
 
@@ -42,13 +39,13 @@
 
 <!-- Datearrivcan Field -->
 <div class="col-sm-12">
-    {!! Form::label('dateArrivCan', 'Datearrivcan:') !!}
+    {!! Form::label('dateArrivCan', 'Date arrivée:') !!}
     <p>{{ $declaration->dateArrivCan }}</p>
 </div>
 
 <!-- Declarationannprecedente Field -->
 <div class="col-sm-12">
-    {!! Form::label('declarationAnnPrecedente', 'Declarationannprecedente:') !!}
+    {!! Form::label('declarationAnnPrecedente', 'Declaration année precedente:') !!}
     <p>{{ $declaration->declarationAnnPrecedente }}</p>
 </div>
 
@@ -60,7 +57,7 @@
 
 <!-- Situationmatrimoniale Field -->
 <div class="col-sm-12">
-    {!! Form::label('situationMatrimoniale', 'Situationmatrimoniale:') !!}
+    {!! Form::label('situationMatrimoniale', 'Situation Matrimoniale:') !!}
     <p>{{ $declaration->situationMatrimoniale }}</p>
 </div>
 

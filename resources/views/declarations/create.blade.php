@@ -5,7 +5,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-12">
-                    <h1>Create Declaration</h1>
+                    <h1>Remplir le formulaire pour soumettre votre déclaration de revenus</h1>
                 </div>
             </div>
         </div>
@@ -28,8 +28,8 @@
             </div>
 
             <div class="card-footer">
-                {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
-                <a href="{{ route('declarations.index') }}" class="btn btn-default">Cancel</a>
+                {!! Form::submit('Confirmer', ['class' => 'btn btn-primary']) !!}
+                <a href="{{ route('declarations.index') }}" class="btn btn-default">Annuler</a>
             </div>
 
             {!! Form::close() !!}

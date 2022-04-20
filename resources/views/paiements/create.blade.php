@@ -5,7 +5,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-12">
-                    <h1>Create Paiement</h1>
+                    <h1>Faire un paiment</h1>
                 </div>
             </div>
         </div>
@@ -28,8 +28,8 @@
             </div>
 
             <div class="card-footer">
-                {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
-                <a href="{{ route('paiements.index') }}" class="btn btn-default">Cancel</a>
+                {!! Form::submit('payer', ['class' => 'btn btn-primary']) !!}
+                <a href="{{ route('paiements.index') }}" class="btn btn-default">Annuler le paiment</a>
             </div>
 
             {!! Form::close() !!}

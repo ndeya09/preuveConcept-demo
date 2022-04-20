@@ -2,24 +2,22 @@
     <table class="table" id="declarations-table">
         <thead>
         <tr>
-            <th>User Id</th>
         <th>Annee</th>
-        <th>Numerocellulaire</th>
-        <th>Numeroappart</th>
-        <th>Codepostal</th>
+        <th>Numero Cellulaire</th>
+        <th>Numero Appartement</th>
+        <th>Code Postal</th>
         <th>Ville</th>
         <th>Province</th>
-        <th>Datearrivcan</th>
-        <th>Declarationannprecedente</th>
+        <th>Date d'arrivée au Canada</th>
+        <th>Declaration année precedente</th>
         <th>Occupation</th>
-        <th>Situationmatrimoniale</th>
+        <th>Situation Matrimoniale</th>
             <th colspan="3">Action</th>
         </tr>
         </thead>
         <tbody>
         @foreach($declarations as $declaration)
             <tr>
-                <td>{{ $declaration->user_id }}</td>
             <td>{{ $declaration->annee }}</td>
             <td>{{ $declaration->numeroCellulaire }}</td>
             <td>{{ $declaration->numeroAppart }}</td>

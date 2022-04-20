@@ -2,8 +2,7 @@
     <table class="table" id="paiements-table">
         <thead>
         <tr>
-            <th>Declaration Id</th>
-        <th>Datepaiment</th>
+        <th>Date Paiment</th>
         <th>Montant</th>
         <th>Statut</th>
             <th colspan="3">Action</th>

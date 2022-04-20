@@ -32,29 +32,91 @@
 </head>
 <body class="hold-transition register-page">
 <div class="register-box">
-    <div class="register-logo">
-        <a href="{{ url('/home') }}"><b>{{ config('app.name') }}</b></a>
-    </div>
+    
 
     <div class="card">
         <div class="card-body register-card-body">
-            <p class="login-box-msg">Register a new membership</p>
+            <p class="login-box-msg">Creer un compte</p>
 
             <form method="post" action="{{ route('register') }}">
                 @csrf
 
                 <div class="input-group mb-3">
                     <input type="text"
-                           name="name"
+                           name="nom"
                            class="form-control @error('name') is-invalid @enderror"
-                           value="{{ old('name') }}"
-                           placeholder="Full name">
+                           value="{{ old('nom') }}"
+                           placeholder="nom">
                     <div class="input-group-append">
                         <div class="input-group-text">
                             <span class="fas fa-user"></span>
                         </div>
                     </div>
-                    @error('name')
+                    @error('nom')
+                    <span class="error invalid-feedback">{{ $message }}</span>
+                    @enderror
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="text"
+                           name="prenom"
+                           class="form-control @error('prenom') is-invalid @enderror"
+                           value="{{ old('prenom') }}"
+                           placeholder="prenom">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-user"></span>
+                        </div>
+                    </div>
+                    @error('prenom')
+                    <span class="error invalid-feedback">{{ $message }}</span>
+                    @enderror
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="text"
+                           name="nas"
+                           class="form-control @error('nas') is-invalid @enderror"
+                           value="{{ old('nas') }}"
+                           placeholder="NAS">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-user"></span>
+                        </div>
+                    </div>
+                    @error('nas')
+                    <span class="error invalid-feedback">{{ $message }}</span>
+                    @enderror
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="date"
+                           name="dateNaissance"
+                           class="form-control @error('dateNaissance') is-invalid @enderror"
+                           value="{{ old('dateNaissance') }}"
+                           placeholder="date de Naissance">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-user"></span>
+                        </div>
+                    </div>
+                    @error('dateNaissance')
+                    <span class="error invalid-feedback">{{ $message }}</span>
+                    @enderror
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="text"
+                           name="adresse"
+                           class="form-control @error('adresse') is-invalid @enderror"
+                           value="{{ old('adresse') }}"
+                           placeholder="Adresse">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-user"></span>
+                        </div>
+                    </div>
+                    @error('adresse')
                     <span class="error invalid-feedback">{{ $message }}</span>
                     @enderror
                 </div>
@@ -79,7 +141,7 @@
                     <input type="password"
                            name="password"
                            class="form-control @error('password') is-invalid @enderror"
-                           placeholder="Password">
+                           placeholder="Mot de passe">
                     <div class="input-group-append">
                         <div class="input-group-text">
                             <span class="fas fa-lock"></span>
@@ -94,30 +156,22 @@
                     <input type="password"
                            name="password_confirmation"
                            class="form-control"
-                           placeholder="Retype password">
+                           placeholder="Confirmé le mot de passe">
                     <div class="input-group-append">
                         <div class="input-group-text"><span class="fas fa-lock"></span></div>
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-8">
-                        <div class="icheck-primary">
-                            <input type="checkbox" id="agreeTerms" name="terms" value="agree">
-                            <label for="agreeTerms">
-                                I agree to the <a href="#">terms</a>
-                            </label>
-                        </div>
-                    </div>
                     <!-- /.col -->
-                    <div class="col-4">
-                        <button type="submit" class="btn btn-primary btn-block">Register</button>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary btn-block">Soumettre</button>
                     </div>
                     <!-- /.col -->
                 </div>
             </form>
 
-            <a href="{{ route('login') }}" class="text-center">I already have a membership</a>
+            <a href="{{ route('login') }}" class="text-center">déja un compte</a>
         </div>
         <!-- /.form-box -->
     </div><!-- /.card -->

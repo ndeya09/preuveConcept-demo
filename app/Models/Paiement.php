@@ -58,10 +58,8 @@ class Paiement extends Model
      * @var array
      */
     public static $rules = [
-        'declaration_id' => 'required',
         'datePaiment' => 'required',
         'montant' => 'required|numeric',
-        'statut' => 'required|string|max:255',
         'created_at' => 'nullable',
         'updated_at' => 'nullable'
     ];

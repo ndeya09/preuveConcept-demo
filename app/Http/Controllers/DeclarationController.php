@@ -9,6 +9,9 @@ use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;
 use Response;
+use Auth;
+use Illuminate\Support\Facades\Http;
+use App\Models\Declaration;
 
 class DeclarationController extends AppBaseController
 {
@@ -29,7 +32,7 @@ class DeclarationController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $declarations = $this->declarationRepository->all();
+        $declarations = Declaration::where('user_id',Auth::id())->get();
 
         return view('declarations.index')
             ->with('declarations', $declarations);
@@ -55,7 +58,7 @@ class DeclarationController extends AppBaseController
     public function store(CreateDeclarationRequest $request)
     {
         $input = $request->all();
-
+        $input['user_id'] = Auth::id();
         $declaration = $this->declarationRepository->create($input);
 
         Flash::success('Declaration saved successfully.');

@@ -1,12 +1,8 @@
 <!-- Declaration Id Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('declaration_id', 'Declaration Id:') !!}
-    {!! Form::number('declaration_id', null, ['class' => 'form-control']) !!}
-</div>
 
 <!-- Datepaiment Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('datePaiment', 'Datepaiment:') !!}
+    {!! Form::label('datePaiment', 'Date Paiment:') !!}
     {!! Form::text('datePaiment', null, ['class' => 'form-control','id'=>'datePaiment']) !!}
 </div>
 
@@ -27,7 +23,3 @@
 </div>
 
 <!-- Statut Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('statut', 'Statut:') !!}
-    {!! Form::text('statut', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
-</div>

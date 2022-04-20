@@ -5,7 +5,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-12">
-                    <h1>Edit Declaration</h1>
+                    <h1>Modifier votre déclaration</h1>
                 </div>
             </div>
         </div>
@@ -26,8 +26,8 @@
             </div>
 
             <div class="card-footer">
-                {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
-                <a href="{{ route('declarations.index') }}" class="btn btn-default">Cancel</a>
+                {!! Form::submit('Enregistrer', ['class' => 'btn btn-primary']) !!}
+                <a href="{{ route('declarations.index') }}" class="btn btn-default">Annuler</a>
             </div>
 
             {!! Form::close() !!}
