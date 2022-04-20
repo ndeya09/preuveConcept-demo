@@ -24,5 +24,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::resource('declarations', App\Http\Controllers\DeclarationController::class);
 
+Route::get('/declarationApi', [App\Http\Controllers\DeclarationController::class,'apiData']);
+
 
 Route::resource('paiements', App\Http\Controllers\PaiementController::class);
+
+

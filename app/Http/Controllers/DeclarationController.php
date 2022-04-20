@@ -36,6 +36,17 @@ class DeclarationController extends AppBaseController
 
         return view('declarations.index')
             ->with('declarations', $declarations);
+
+    }
+    public function apiData(Request $request)
+    {
+       $response = Http::get('https://app.sportdataapi.com/api/v1/soccer/countries/29?apikey=4ed39d40-c0be-11ec-ac2c-bff8a910b194');
+
+       $jsondata = json_decode($response);
+
+       return $jsondata;
+
+        
     }
 
     /**
@@ -45,7 +56,14 @@ class DeclarationController extends AppBaseController
      */
     public function create()
     {
-        return view('declarations.create');
+        $response = Http::get('https://app.sportdataapi.com/api/v1/soccer/countries/29?apikey=1b74efd0-c0c8-11ec-9804-ede59613358b');
+
+       $jsondata = json_decode($response);
+
+       //return $jsondata->data->name;
+
+        return view('declarations.create',compact("jsondata"));
+
     }
 
     /**

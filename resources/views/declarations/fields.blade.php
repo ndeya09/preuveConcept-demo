@@ -26,7 +26,7 @@
 <!-- Ville Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('ville', 'Ville:') !!}
-    {!! Form::text('ville', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
+    <input class = "form-control" type="text" name="ville" value="{{ $jsondata->data->name}}">
 </div>
 
 <!-- Province Field -->
@@ -54,12 +54,10 @@
 <!-- Declarationannprecedente Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('declarationAnnPrecedente', 'Declaration année precedente:') !!}<br>
-    <form name="declarationAnnPrecedente" class="form-control">
-    <input type="checkbox" name="oui" id="oui" value="oui">
+    <input type="radio" name="declarationAnnPrecedente" id="oui" value="oui">
     <label for="oui">Oui</label><br>
-    <input type="checkbox" name="non" id="non" value="non">
+    <input type="radio" name="declarationAnnPrecedente" id="non" value="non">
     <label for="non">Non applicable - Nouvel(le) immigrant(e)</label><br>
-</form>
 </div>
 
 <!-- Occupation Field -->
